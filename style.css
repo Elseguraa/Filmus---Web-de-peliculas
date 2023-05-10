@@ -1,0 +1,446 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(216, 216, 216);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:#009af3;
+  border-radius: 4px;
+  
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background-image: url(../web/img/background.jpg);
+    color: var(--text-color);
+    padding-top: var(--nav-height);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    padding: 30px 20px;
+    z-index: 10;
+}
+header.abajo{
+    background: #0e0e0e;
+    padding: 15px 20px;
+}
+
+header.abajo .logo,
+header.abajo ul li a{
+    color: #ffffff;
+}
+
+
+
+header .logo{
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    font-family: helvetica;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+header ul li a:hover {
+    position: relative;
+    font-family: helvetica;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #009af3;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    transition: all 0.1s;
+}
+
+.logo:hover {
+    color: #009af3;
+    transition: all 0.5s;
+}
+
+
+
+.bx {
+    color: #009af3 !important;
+    margin: 0 15px 0 0;
+    transition: all 0.5s;
+    
+}
+
+
+
+
+
+
+
+/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+
+
+
+
+.pelicula-principal {
+	font-size: 16px;
+	min-height: 50.62em;
+	color: #fff;
+	/* background: linear-gradient(rgba(0, 0, 0, .50) 0%, rgba(0,0,0,.50) 100%), url(./img1.jpg);*/
+	background-position: center center;
+	background-size: cover;
+	margin-bottom: 3.12em;
+	display: flex;
+	align-items: end;
+    
+}
+
+.pelicula-principal .contenedor {
+	margin: 0 auto;
+	margin-bottom: 10.25em;
+}
+
+.pelicula-principal .titulo {
+	font-weight: 600;
+	font-size: 3.12em;
+	margin-top: 0.4em;
+}
+
+.pelicula-principal .descripcion {
+	font-weight: normal;
+	font-size: 1em;
+	line-height: 1.75em;
+	max-width: 50%;
+	margin-bottom: 1.25em;
+}
+
+.pelicula-principal .boton {
+	background: rgba(0,0,0, 0.5);
+	border: none;
+	border-radius: 0.31em;
+	padding: 0.93em 1.87em;
+	color: #fff;
+	margin-right: 1.25em;
+	cursor: pointer;
+	transition: .3s ease all;
+	font-size: 1.12em;
+    transition: all 0.9s;
+}
+
+.pelicula-principal .boton:hover {
+	background: #fff;
+	color: #000;
+    transition: all 0.9s;
+}
+
+.pelicula-principal .boton i {
+	margin-right: 1.25em;
+}
+
+.slider{
+    position: relative;
+    background: #000116;
+    width: 99.1vw;
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .slider .slide{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(0% at 0 50%);
+  }
+  
+  .slider .slide.active{
+    clip-path: circle(150% at 0 50%);
+    transition: 1.2s;
+  }
+
+  
+  .slider .slide img{
+    display: block;
+    position:absolute;
+    width: 100.2%;
+    height: 100%;
+    object-fit: cover;
+    
+    
+  }
+  
+  .slider .slide .info{
+    position: absolute;
+    color: #ffffff;
+    width: 75%;
+    margin-top: 530px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+  }
+  
+  .slider .slide .info h2{
+    font-size: 2em;
+    font-weight: 800;
+  }
+  
+  .slider .slide .info p{
+    font-size: 1em;
+    font-weight: 400;
+    text-shadow: 1.5px 1.5px 0 #333;
+    
+  }
+  
+  .navigation{
+    height: 950px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .slider:hover .navigation{
+    opacity: 1;
+  }
+  
+  .prev-btn, .next-btn{
+    z-index: 999;
+    font-size: 2em;
+    color: #222;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .prev-btn{
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+  }
+  
+  .next-btn{
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+  }
+  
+  .navigation-visibility{
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .navigation-visibility .slide-icon{
+    z-index: 999;
+    background: rgba(255, 255, 255, 0.336);
+    width: 20px;
+    height: 10px;
+    transform: translateY(-50px);
+    margin: 0 6px;
+    border-radius: 2px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 20%);
+  }
+  
+  .navigation-visibility .slide-icon.active{
+    background: #4285F4;
+  }
+
+
+
+  h2 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+    position: absolute;
+    right: 46.5%;
+    top: 110%;
+  }
+
+  .imagenes {
+    display: flex;
+    margin: auto;
+    width: 85%;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    border-radius: 3px;
+    margin-top: 100px;
+    
+  }
+
+  .imagenes .imagen {
+    position: relative;
+    width: 26%;
+    height: 350px;
+    margin-bottom: 350px;
+    
+
+  }
+
+
+  .imagenes .imagen img:hover {
+    filter: brightness(1.0);
+    transition: all 0.4s;
+  }
+
+
+  .imagen figure {
+    overflow: hidden;
+    cursor:pointer;
+    transition: all 500ms ease;
+    box-shadow: 1px 10px 15px rgba(0,0,0,0,0.50);
+    border-radius: 10px;
+    transition: all 0.3s;
+    
+}
+
+.imagen figure:hover {
+  overflow: hidden;
+  cursor:pointer;
+  transition: all 500ms ease;
+  box-shadow: 1px 10px 15px rgba(0,0,0,0,0.50);
+  border-radius: 10px;
+  border: 3px solid #009af3;
+  transition: all 0.3s;
+  
+}
+
+
+.imagen figure img {
+  width: 100%;
+    height: 150%;
+    border-radius: 10px;
+    filter: brightness(0.7);
+    transition: all 0.4s;
+    width: 100%;
+    height: 100%;
+  transition: all 500ms ease-out;
+  
+
+}
+
+.imagen figure:hover > img{
+  transform: scale(1.1);
+  
+
+}
+
+
+
+
+
+  .titulop {
+    color: #fff;
+    text-align: center;
+  }
+
+  .infos_peli {
+    display: flex;
+    position:relative;
+    
+  }
+
+  .infos_peli .info_peli span {
+    color: #fff;
+    position: absolute;
+    bottom: 80px;
+  }
+
+  .infos_peli .info_peli .one {
+    position: relative;
+    left: 5px;
+  } 
+
+  .infos_peli .info_peli .two {
+    position: relative;
+    left: 2px;
+  } 
+
+
+  .infos_peli .info_peli i {
+    position: relative;
+    bottom: 80px;
+    left: 15px;
+  }
+
+
+  
+  
+
+      
+
+@media screen and (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    
+    .navbar ul {
+      flex-direction: column;
+    }
+    
+    .navbar li {
+      margin: 10px 0;
+    }
+  }
+
+/* ---- ----- ----- Media Queries ----- ----- ----- */
+@media screen and (max-width: 768px) {
+	
+
+	.navbar {
+		flex-direction: column;
+		text-align: center;
+	}
+
+	.pelicula-principal {
+        text-align: center;
+		font-size: 14px;
+	}
+
+	.pelicula-principal .descripcion {
+		max-width: 90%;
+        margin-left: 15px;
+	}
+}
