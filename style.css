@@ -18,7 +18,7 @@
 
 body {
     font-family: "Cairo", sans-serif;
-    background-image: url(../web/img/background.jpg);
+    background-image: url(../TP/img/background.jpg);
     color: var(--text-color);
     padding-top: var(--nav-height);
 }
