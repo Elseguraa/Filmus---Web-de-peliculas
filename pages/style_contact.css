@@ -1,0 +1,378 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgb(216, 216, 216);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color:#009af3;
+  border-radius: 4px;
+  
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+    background-image: url(../img/background.jpg);
+    scroll-behavior: smooth;
+}
+
+
+.navbar ul li a {
+    position: relative;
+    letter-spacing: 4px;
+    text-decoration: none;
+  }
+  
+  .navbar ul li a::after {
+    letter-spacing: 4px;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background: rgb(0, 139, 231);
+    /*animacion de derecha a izquierda*/
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform 0.2s ease-in-out;
+  }
+  .navbar ul li a:hover:after {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+  
+  header{
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      transition: 0.7s;
+      padding: 30px 20px;
+      z-index: 501;
+  }
+  header.abajo{
+      background: #0e0e0e;
+      padding: 15px 20px;
+  }
+  
+  header.abajo .logo,
+  header.abajo ul li a{
+      color: #ffffff;
+  }
+  
+  
+  
+  header .logo{
+      position: relative;
+      color: #fff;
+      font-weight: bold;
+      font-size: 2em;
+      letter-spacing: 2px;
+      transition: 1.5s;
+      text-decoration: none;
+  }
+  nav{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 409;
+  }
+  
+  header ul{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  header ul li{
+      list-style: none;
+  }
+  
+  header ul li a{
+      position: relative;
+      font-family: helvetica;
+      margin: 0 15px;
+      text-decoration: none;
+      color: #fff;
+      letter-spacing: 2px;
+      font-weight: 600;
+      transition: all 0.5s;
+      letter-spacing: 4px;
+  }
+  
+  header ul li a:hover {
+      position: relative;
+      font-family: helvetica;
+      margin: 0 15px;
+      text-decoration: none;
+      color: #ffffff;
+      letter-spacing: 2px;
+      font-weight: 600;
+      transition: all 0.5s;
+      letter-spacing: 4px;
+  }
+  
+  .logo {
+      font-size: 2rem;
+      font-weight: 900;
+      transition: all 0.1s;
+  }
+  
+  .logo:hover {
+      color: #009af3;
+      transition: all 0.5s;
+  }
+  
+  
+  
+  .bx {
+      color: #009af3 !important;
+      margin: 0 15px 0 0;
+      transition: all 0.5s;
+      
+  }
+
+
+
+
+.slider-one {
+    position: absolute;
+  overflow: hidden;
+  margin: 0 0 0 300px;
+
+    /*margin: 250px 0 0 15% ; */
+    
+
+}
+
+.progress-container {
+    position: absolute;
+    height: 10px;
+    background-color: rgba(0, 0, 0, .2);
+    width: 400px;
+    top: 0;
+    z-index: 1000;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: #009af3;
+    border-radius: 0 3px 3px 0 ;
+    transition: width 0.8s;
+}
+
+
+
+
+img {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 10px ;
+}
+
+#img2 {
+    opacity: 0;
+}
+
+.active {
+    opacity: 1 !important;
+    transition: all 1s;
+}
+
+
+.slideshow {
+    position: relative;
+    z-index: 998;
+    height: 400px;
+    width: 400px;
+    transition: all .6s;
+    box-shadow: 1px 17px 27px #000;
+}
+
+.slideshow:hover {
+    position: relative;
+    z-index: 998;
+    height: 400px;
+    width: 400px;
+}
+
+.slideshow img {
+    filter: brightness(0.7);
+    transition: all .5s;
+}
+
+.slideshow:hover img {
+    filter: brightness(1); 
+    transition: all .5s;
+}
+
+.slideshow:hover + .info {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);    
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    opacity: 1;
+    z-index: 1001;
+    bottom: 0px;
+    z-index: 1000;
+    transition: all .6s;
+}
+
+.info {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);    
+    width: 400px;
+    height: 150px;
+    border-radius: 10px;
+    bottom: 0px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    transition: all .6s;
+}
+
+.slideshow:hover ~ .info {
+    opacity: 1;
+    transition: all .6s;
+}
+
+.slideshow:not(:hover) ~ .info {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all .6s;
+}
+
+
+
+
+.nombre {
+    color: #fff;
+    padding-top: 5px;
+    margin: 0 0 0px 35%;
+}
+
+.text {
+    color: #fff;
+    margin: 0 0 0px 10px;
+    
+}
+
+
+#ig {
+    color:#fff !important;
+    font-size: 30px;
+    margin: 0 0 0 85%;
+    cursor: pointer;
+    
+    
+}
+
+.barra {
+    margin: 11% 0 0 35%;
+    position: absolute;       
+    width: 30%;
+    border-bottom: 3px solid #009af3 ;
+  }
+
+
+.contact {
+    position: relative;
+    background-color: #24303c;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 5px;
+    font-family: 'calibri';
+    color: white;
+    box-shadow: 1px 17px 27px #000;
+    margin-top: 300px;
+    margin-left: 60%;
+    
+
+}
+
+
+.contact h4 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    margin-left: 33%;
+
+}
+
+
+.form_input {
+    width: 100%;
+    background: #24303c;
+    padding: 5px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+    border: 1px solid #1f53c5 ;
+    color: #fff;
+    font-family: 'calibri';
+    font-size: 18px;
+}
+
+
+ textarea {
+    min-height: 80px;
+    resize: none;
+}
+
+
+.form_section input {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #1f53c5 ;
+    background-color: transparent;
+    transition: all .6s;
+    /* background-color: #1f53c5; */
+}
+
+.form_section input:hover  {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #1f53c5 ;
+    background-color: #1f53c5;
+    transition: all .6s;
+    cursor: pointer;
+    /* background-color: #1f53c5; */
+}
+
+
+.error-message {
+    position: relative;
+    bottom: 15px;
+}
+
+
+
+/* --------------------- Media queries para moviles ------------------------*/
+@media only screen and (max-width: 600px) {
+
+}
+
+/* --------------------- Media queries para tabletss ------------------------*/
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+}
+
+/* --------------------- Media queries para pc ------------------------*/
+@media only screen and (min-width: 1025px) and (max-width: 1900px) {
+
+}

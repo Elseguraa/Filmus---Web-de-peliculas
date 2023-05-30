@@ -24,6 +24,33 @@ body {
     scroll-behavior: smooth;
 }
 
+.navbar ul li a {
+  position: relative;
+  letter-spacing: 4px;
+  text-decoration: none;
+  
+}
+
+.navbar ul li a::after {
+  letter-spacing: 4px;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: rgb(0, 139, 231);
+  /*animacion de derecha a izquierda*/
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.navbar ul li a:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
 header{
     position: fixed;
     top: 0;
@@ -33,7 +60,7 @@ header{
     justify-content: space-around;
     transition: 0.7s;
     padding: 30px 20px;
-    z-index: 501;
+    z-index: 1000;
 }
 header.abajo{
     background: #0e0e0e;
@@ -83,6 +110,7 @@ header ul li a{
     letter-spacing: 2px;
     font-weight: 600;
     transition: all 0.5s;
+    letter-spacing: 4px;
 }
 
 header ul li a:hover {
@@ -90,10 +118,11 @@ header ul li a:hover {
     font-family: helvetica;
     margin: 0 15px;
     text-decoration: none;
-    color: #009af3;
+    color: #ffffff;
     letter-spacing: 2px;
     font-weight: 600;
     transition: all 0.5s;
+    letter-spacing: 4px;
 }
 
 .logo {
@@ -122,7 +151,7 @@ header ul li a:hover {
 
 
 
-/* ---- ----- ----- Pelicula Principal ----- ----- ----- */
+/* Pelicula Principal */
 
 
 
@@ -238,7 +267,7 @@ header ul li a:hover {
   }
   
   .navigation{
-    height: 950px;
+    height: 99%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -289,6 +318,10 @@ header ul li a:hover {
   .navigation-visibility .slide-icon.active{
     background: #4285F4;
   }
+
+
+
+  /* Terror */
 
 
   .generos {
@@ -412,7 +445,7 @@ header ul li a:hover {
 
 
 
-/* ---- ----- ----- Contenedor Titulo y Controles ----- ----- ----- */
+/* Contenedor Titulo y Controles */
 .contenedor-titulo-controles {
 	display: flex;
 	justify-content: space-between;
@@ -439,7 +472,7 @@ header ul li a:hover {
 }
 
 
-/* ---- ----- ----- Contenedor Principal y Flechas ----- ----- ----- */
+/* Contenedor Principal y Flechas */
 
 #vistas_text {
   position: absolute;
@@ -525,45 +558,6 @@ header ul li a:hover {
 	vertical-align: top;
 }
 
-/* ---- ----- ----- Media Queries ----- ----- ----- */
-@media screen and (max-width: 800px) {
-	header .logotipo {
-		margin-bottom: 10px;
-		font-size: 30px;
-	}
-
-	header .contenedor {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.pelicula-principal {
-		font-size: 14px;
-	}
-
-	.pelicula-principal .descripcion {
-		max-width: 100%;
-	}
-
-	.peliculas-recomendadas .contenedor-carousel {
-		overflow: visible;
-	}
-
-	.peliculas-recomendadas .contenedor-carousel .carousel {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		gap: 20px;
-	}
-
-	.peliculas-recomendadas .indicadores,
-	.peliculas-recomendadas .flecha-izquierda,
-	.peliculas-recomendadas .flecha-derecha {
-		display: none;
-	}
-}
-
-
-
 
 .barra-bottom {          
   position: absolute;       
@@ -625,48 +619,208 @@ header ul li a:hover {
 
 
 
+@media only screen and (max-width: 600px) {
+
+  .logo {
+    font-size: 1rem;
+    font-weight: 900;
+    transition: all 0.1s;
+}
+
+.logo:hover {
+    color: #009af3;
+    transition: all 0.5s;
+}
 
 
 
-  
-
-
-  
-  
-
-      
-
-@media screen and (max-width: 768px) {
-    .navbar {
-      flex-direction: column;
-      align-items: stretch;
-    }
+.bx {
+    color: #009af3 !important;
+    margin: 0px 15px 0 0px;
+    transition: all 0.5s;
     
-    .navbar ul {
-      flex-direction: column;
-    }
+}
+
+
+
+  .navbar ul li a {
+    position: relative;
+    letter-spacing: 4px;
+    text-decoration: none;
+    left: 20px;
+    top: 5px;
     
-    .navbar li {
-      margin: 10px 0;
-    }
   }
 
-/* ---- ----- ----- Media Queries ----- ----- ----- */
-@media screen and (max-width: 768px) {
-	
 
-	.navbar {
-		flex-direction: column;
-		text-align: center;
-	}
+  .pelicula-principal {
+    overflow-x: hidden;
+  }
 
-	.pelicula-principal {
-        text-align: center;
-		font-size: 14px;
-	}
+    
+  
+  
+  .info  {
+    display: none;
+  }
 
-	.pelicula-principal .descripcion {
-		max-width: 90%;
-        margin-left: 15px;
-	}
+  .navigation{
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  .pelicula {
+    flex: 0 0 200px;
+  }
+
+
+  .imagenes .imagen {
+    position: relative;
+    width: 26%;
+    height: 250px;
+    margin-bottom: 0px;
+    
+
+  }
+
+  .infos_peli {
+    display: none;
+  }
+
+  .generos {
+    margin-top: -220px;
+  }
+
+  
+
+
 }
+
+
+/* Estilos para tabletas */
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+  .navbar ul li a {
+    position: relative;
+    letter-spacing: 4px;
+    text-decoration: none;
+    left: 20px;
+    top: 5px;
+    
+  }
+
+
+  .pelicula-principal {
+    overflow-x: hidden;
+  }
+
+    
+  .navigation{
+    height: 99%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 1;
+    
+  }
+  
+  .info  {
+    display: none;
+  }
+
+  .navigation{
+    height: 95%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+
+  .pelicula {
+    flex: 0 0 200px;
+  }
+
+
+  .imagenes .imagen {
+    position: relative;
+    width: 26%;
+    height: 380px;
+    margin-bottom: 0px;
+    
+
+  }
+
+  .infos_peli {
+    display: none;
+  }
+
+  .generos {
+    margin-top: -220px;
+  }
+}
+
+/* Estilos para pantallas grandes */
+@media only screen and (min-width: 1025px) and (max-width: 1900px) {
+
+  
+  .pelicula-principal {
+    overflow: hidden;
+  }
+
+
+  .slider {
+    overflow: hidden;
+  }
+
+
+    
+  .navigation{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+
+  .slide {
+    width: 33.33%;
+  }
+
+  .imagenes .imagen {
+    position: relative;
+    width: 26%;
+    height: 700px;
+    margin-bottom: 0px;
+    
+
+  }
+  .generos {
+    margin-top: -220px;
+  }
+
+  .slider .slide #info_pelis{
+    position: absolute;
+    color: #ffffff;
+    width: 75%;
+    margin-top: 400px;
+    margin-left: 50px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 5px 25px rgb(1 1 1 / 5%);
+    overflow: hidden;
+  }
+
+
+
+  
+
+  
+}
+

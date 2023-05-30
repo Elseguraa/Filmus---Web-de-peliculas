@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style_contact.css" />
+    <title>Contacto</title>
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;500;600;700;800;900&family=Poppins:wght@500&display=swap"
+      rel="stylesheet"
+    />
+
+
+     <!-- box icons-->
+     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <header>
+      
+        <a href="#" class="logo">
+          <i class='bx bx-movie-play bx-tada main-color'></i>Fil<span class="main-color">m</span>us
+      </a>
+        <nav class="navbar">
+          <ul>
+            <li><a href="../index.html">Inicio</a></li>
+            <li><a href="./top.html">Top</a></li>
+            <li><a href="./contacto.html">Contacto</a></li>
+          </ul>
+        </nav>
+      </header>
+
+
+
+     <div class="barra"></div> 
+
+
+      
+      
+      
+      <div class="slider-one">
+        <div class="progress-container">
+          <div class="progress-bar"></div>
+        </div>
+
+        <div class="slideshow">
+          <figure>  
+          <img src="" alt="" id="img1">
+        </figure>
+        <figure> 
+          <img src="" alt="" id="img2">
+        </figure>
+        </div>
+
+        <div class="info">
+          <h3 class="nombre">Segura Lucas</h3>
+          <p class="text">Soy un estudiante de la carrrera "Desarrollo de software"
+              de la universidad ULP :D
+          </p>
+  
+          
+  
+      </div>
+        <div id="indicadores"></div>
+      </div>
+
+
+      <section class="contact">
+
+        <h4>Formulario</h4>
+
+        <div class="form_Section">
+          <input type="text" id="name"  class="form_input" placeholder="Ingrese su nombre" required maxlength="30">
+          <div id="name-error" class="error-message"></div>
+        </div>
+
+        <div class="form_Section">
+        <input type="email" id="email"  class="form_input" placeholder="Ingrese su correo" required>
+        <div id="email-error" class="error-message"></div>
+      </div>
+
+        <div class="form_section"  >
+          <textarea id="message"class="form_input" placeholder="Escriba su recomendacion..." required maxlength="200" ></textarea>
+          <div id="message-error" class="error-message"></div>
+      </div>
+
+      <div class="form_section">
+          <input type="submit" id="submit-btn" class="form_input">
+      </div>
+
+
+      
+</section>
+      
+
+      
+      
+
+<script src="./script_contact.js"></script>
+
+
+</body>
+</html>
