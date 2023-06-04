@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./style_contact.css" />
     <title>Contacto</title>
 
-    <!--Fonts-->
+    <!-- fuente de letra-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -69,34 +69,35 @@
         <div id="indicadores"></div>
       </div>
 
-
+      
       <section class="contact">
 
         <h4>Formulario</h4>
 
+        <form action="https://formsubmit.co/lucassegura2020@gmail.com" method="POST"> 
         <div class="form_Section">
-          <input type="text" id="name"  class="form_input" placeholder="Ingrese su nombre" required maxlength="30">
+          <input type="text" id="name" name="name"  class="form_input" placeholder="Ingrese su nombre" required maxlength="30">
           <div id="name-error" class="error-message"></div>
         </div>
 
         <div class="form_Section">
-        <input type="email" id="email"  class="form_input" placeholder="Ingrese su correo" required>
+        <input type="email" id="email" name="email"  class="form_input" placeholder="Ingrese su correo" required>
         <div id="email-error" class="error-message"></div>
       </div>
 
         <div class="form_section"  >
-          <textarea id="message"class="form_input" placeholder="Escriba su recomendacion..." required maxlength="200" ></textarea>
+          <textarea id="message"class="form_input" name="comments" placeholder="Escriba su recomendacion..." required maxlength="200" ></textarea>
           <div id="message-error" class="error-message"></div>
       </div>
 
       <div class="form_section">
-          <input type="submit" id="submit-btn" class="form_input">
+          <input type="submit" id="submit-btn" class="form_input" value="Enviar">
       </div>
-
+    </form>
 
       
 </section>
-      
+
 
       
       

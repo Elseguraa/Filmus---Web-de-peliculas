@@ -1,3 +1,5 @@
+
+/* General */
 *{
     margin: 0;
     padding: 0;
@@ -23,17 +25,21 @@ body {
 }
 
 
+/* navbar */
+
 .navbar ul li a {
     position: relative;
     letter-spacing: 4px;
     text-decoration: none;
+    left: 10px;
+    
   }
   
   .navbar ul li a::after {
     letter-spacing: 4px;
     content: "";
     position: absolute;
-    right: 0;
+    right: 0px;
     bottom: 0;
     left: 0;
     height: 2px;
@@ -52,13 +58,13 @@ body {
   header{
       position: fixed;
       top: 0;
-      left: 0;
+      left: -8px;
       width: 100%;
       display: flex;
       justify-content: space-around;
       transition: 0.7s;
       padding: 30px 20px;
-      z-index: 501;
+      z-index: 1000;
   }
   header.abajo{
       background: #0e0e0e;
@@ -143,7 +149,7 @@ body {
       
   }
 
-
+/* carrousel */
 
 
 .slider-one {
@@ -282,6 +288,8 @@ img {
     
 }
 
+/* barra */
+
 .barra {
     margin: 11% 0 0 35%;
     position: absolute;       
@@ -289,6 +297,7 @@ img {
     border-bottom: 3px solid #009af3 ;
   }
 
+/* form contacto */
 
 .contact {
     position: relative;
@@ -361,18 +370,3 @@ img {
 }
 
 
-
-/* --------------------- Media queries para moviles ------------------------*/
-@media only screen and (max-width: 600px) {
-
-}
-
-/* --------------------- Media queries para tabletss ------------------------*/
-@media only screen and (min-width: 601px) and (max-width: 1024px) {
-
-}
-
-/* --------------------- Media queries para pc ------------------------*/
-@media only screen and (min-width: 1025px) and (max-width: 1900px) {
-
-}

@@ -1,3 +1,5 @@
+/* General */
+
 *{
     margin: 0;
     padding: 0;
@@ -23,6 +25,8 @@ body {
     padding-top: var(--nav-height);
     scroll-behavior: smooth;
 }
+
+/* navbar */
 
 .navbar ul li a {
   position: relative;
@@ -105,6 +109,7 @@ header ul li a{
     position: relative;
     font-family: helvetica;
     margin: 0 15px;
+    top: 10px;
     text-decoration: none;
     color: #fff;
     letter-spacing: 2px;
@@ -114,15 +119,15 @@ header ul li a{
 }
 
 header ul li a:hover {
-    position: relative;
-    font-family: helvetica;
-    margin: 0 15px;
-    text-decoration: none;
-    color: #ffffff;
-    letter-spacing: 2px;
-    font-weight: 600;
-    transition: all 0.5s;
-    letter-spacing: 4px;
+  position: relative;
+  font-family: helvetica;
+  margin: 0 15px;
+  text-decoration: none;
+  color: #ffffff;
+  letter-spacing: 2px;
+  font-weight: 600;
+  transition: all 0.5s;
+  letter-spacing: 4px;
 }
 
 .logo {
@@ -151,7 +156,7 @@ header ul li a:hover {
 
 
 
-/* Pelicula Principal */
+/* Peliculas Principales */
 
 
 
@@ -617,7 +622,7 @@ header ul li a:hover {
   
 }
 
-
+/* media queries para celular */
 
 @media only screen and (max-width: 600px) {
 

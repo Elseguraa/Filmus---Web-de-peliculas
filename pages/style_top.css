@@ -1,3 +1,5 @@
+
+/* General */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
 *
  {
@@ -10,14 +12,14 @@
 
 
 html {
-    font-size: 62.5%;
-    font-family: "Cairo", sans-serif;
-    scroll-behavior: smooth;
+  font-size: 62.5%;
+  font-family: "Cairo", sans-serif;
+  scroll-behavior: smooth;
   }
 
   @media (min-width: 1440px) {
     html {
-      zoom: 1.5;
+      zoom: 1.4;
     }
   }
   
@@ -41,125 +43,127 @@ body {
   
 
 }
+/* navbar */
+
+
+
 .navbar ul li a {
-    position: relative ;
-    letter-spacing: 4px ;
-    text-decoration: none ;
-  }
+  font-size: 12px;
+  position: relative;
+  letter-spacing: 1px;
+  text-decoration: none;
+  left: 12px;
+  bottom: 6px;
+
   
-  .navbar ul li a::after  {
-    letter-spacing: 4px ;
-    content: "" ;
-    position: absolute ;
-    right: 0 ;
-    bottom: 0 ;
-    left: 0 ;
-    height: 2px  ;
-    width: 100% ;
-    background: rgb(0, 139, 231) ;
-    /*animacion de derecha a izquierda*/
-    transform-origin: right ;
-    transform: scaleX(0) ;
-    transition: transform 0.2s ease-in-out ;
-  }
-  .navbar ul li a:hover:after {
-    transform-origin: left ;
-    transform: scaleX(1) ;
-  }
-  
-  header{
-      position: fixed ;
-      top: 0 ;
-      left: 0 ;
-      width: 100% ;
-      display: flex ;
-      justify-content: space-around ;
-      transition: 0.7s ;
-      padding: 30px 20px ;
-      z-index: 501 ;
-  }
-  header.abajo{
-      background: #0e0e0e ;
-      padding: 15px 20px ;
-  }
-  
-  header.abajo .logo,
-  header.abajo ul li a {
-      color: #ffffff ;
-  }
-  
-  
-  
-  header .logo{
-      position: relative ;
-      color: #fff ;
-      font-weight: bold ;
-      font-size: 2em ;
-      letter-spacing: 2px ;
-      transition: 1.5s ;
-      text-decoration: none;
-  }
-  nav{
-      display: flex ;
-      justify-content: center ;
-      align-items: center  ;
-      z-index: 409 ;
-  }
-  
-  header ul{
-      position: relative ;
-      display: flex ;
-      justify-content: center ;
-      align-items: center ;
-  }
-  
-  header ul li{
-      list-style: none ;
-  }
-  
-  header ul li a{
-      position: relative ;
-      font-family: helvetica ;
-      margin: 0 15px ;
-      text-decoration: none ;
-      color: #fff ;
-      letter-spacing: 2px ;
-      font-weight: 600;
-      transition: all 0.5s;
-      letter-spacing: 4px;
-  }
-  
-  header ul li a:hover {
-      position: relative;
-      font-family: helvetica;
-      margin: 0 15px;
-      text-decoration: none;
-      color: #ffffff;
-      letter-spacing: 2px;
-      font-weight: 600;
-      transition: all 0.5s;
-      letter-spacing: 4px;
-  }
-  
-  .logo {
-      font-size: 2rem;
-      font-weight: 900;
-      transition: all 0.1s;
-  }
-  
-  .logo:hover {
-      color: #009af3;
-      transition: all 0.5s;
-  }
-  
-  
-  
-  .bx {
-      color: #009af3 !important;
-      margin: 0 15px 0 0;
-      transition: all 0.5s;
-      
-  }
+}
+
+.navbar ul li a::after {
+  font-size: 12px;
+  letter-spacing: 1px;
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background: rgb(0, 139, 231);
+  /*animacion de derecha a izquierda*/
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.2s ease-in-out;
+}
+.navbar ul li a:hover:after {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0.7s;
+    padding: 30px 20px;
+    z-index: 1000;
+}
+header.abajo{
+    background: #0e0e0e;
+    padding: 15px 20px;
+}
+
+header.abajo .logo,
+header.abajo ul li a{
+    color: #ffffff;
+}
+
+
+
+header .logo{
+    position: relative;
+    color: #fff;
+    font-weight: bold;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 409;
+}
+
+header ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    position: relative;
+    font-family: helvetica;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 4px;
+    font-weight: 600;
+    transition: all 0.5s;
+    letter-spacing: 4px;
+}
+
+
+.logo {
+    font-size: 2rem;
+    font-weight: 900;
+    transition: all 0.1s;
+}
+
+.logo:hover {
+    color: #009af3;
+    transition: all 0.5s;
+}
+
+
+
+.bx {
+    color: #009af3 !important;
+    margin: 0 15px 0 0;
+    transition: all 0.5s;
+    
+}
+
+
+/* TOP */
 
 
 h1 {
