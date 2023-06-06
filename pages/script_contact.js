@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const imagenes = [
-      /* Debes cambiar estas rutas por las de tus propias imágenes */
+      
       "images/image1.jpeg",
       "images/image2.jpeg",
       "images/image3.jpeg",
@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let i = 1;
     const img1 = document.querySelector("#img1");
     const img2 = document.querySelector("#img2");
-    const progressBar = document.querySelector(".progress-bar"); // Seleccionar el elemento por la clase correcta
+    const progressBar = document.querySelector(".progress-bar"); 
     const divIndicadores = document.querySelector("#indicadores");
     let porcentaje_base = 100 / imagenes.length;
     let porcentaje_actual = porcentaje_base;
